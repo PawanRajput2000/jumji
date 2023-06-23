@@ -14,7 +14,7 @@ const ForgetPassword = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://jumjibackend.vercel.app/forgetPassword', {
+      const response = await fetch('https://jumjibackend.onrender.com/forgetPassword', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

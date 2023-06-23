@@ -21,7 +21,7 @@ const Login = () => {
 
 
         let {Email, Password } = credentials
-        let res = await fetch("https://jumjibackend.vercel.app/login", {
+        let res = await fetch("https://jumjibackend.onrender.com/login", {
             method: "post",
             body: JSON.stringify({
                Email, Password

@@ -15,7 +15,7 @@ const ResetPasswordForm = () => {
     console.log(params.token)
 
     try {
-      const response = await fetch(`https://jumjibackend.vercel.app/reset-password/${params.token}`, {
+      const response = await fetch(`https://jumjibackend.onrender.com/reset-password/${params.token}`, {
 
         method: 'POST',
         headers: {

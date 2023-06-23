@@ -24,7 +24,7 @@ function SignUP() {
         e.preventDefault()
     
         let {Fullname , Email , Password} = formData
-        let res =  await fetch("https://jumjibackend.vercel.app/signup",{
+        let res =  await fetch("https://jumjibackend.onrender.com/signup",{
             method :"post",
             body:JSON.stringify({
                 Fullname ,Email, Password
