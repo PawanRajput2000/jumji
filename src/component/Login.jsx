@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate()
     const [credentials, setCredentials] = useState({
         Email: '',
         Password: '',
@@ -20,11 +21,11 @@ const Login = () => {
         e.preventDefault();
 
 
-        let {Email, Password } = credentials
+        let { Email, Password } = credentials
         let res = await fetch("https://jumjibackend.onrender.com/login", {
             method: "post",
             body: JSON.stringify({
-               Email, Password
+                Email, Password
             }), headers: {
                 "content-Type": "application/json"
             }
@@ -34,10 +35,9 @@ const Login = () => {
         if (result.status === false) {
             alert(result.data)
         } else {
-            alert("Login succesfully")
-
+            navigate("/dashboard")
         }
-        
+
 
         // Reset the form fields after submission
         setCredentials({
@@ -73,10 +73,10 @@ const Login = () => {
                         />
                     </div>
                     <button type="submit">Login</button>
-                    <p><Link to={"/signup"}>  Don't have account ?</Link> <Link to={"/forgetpassword"}>Forget Password</Link></p>
+                    <p><Link to={"/"}>  Don't have account ?</Link> <Link to={"/forgetpassword"}>Forget Password</Link></p>
                 </form>
             </div>
-            
+
         </>
     );
 };
