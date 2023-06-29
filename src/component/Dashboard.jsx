@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 function Dashboard() {
-  const [orderData, setOrderData] = useState(null);
+  const [orderData, setOrderData] = useState([]);
 
   useEffect(() => {
     fetch('https://jumjibackend.onrender.com/items')
