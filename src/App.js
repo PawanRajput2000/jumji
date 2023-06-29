@@ -5,7 +5,7 @@ import Login from './component/Login';
 import SignUP from './component/SignUP';
 import ForgetPassword from './component/ForgetPassword';
 import ResetPasswordForm from './component/ResetPasswordForm';
-import Image from './component/Image';
+
 import Dashboard from './component/Dashboard';
 
 function App() {
