@@ -3,11 +3,18 @@ import React, { useEffect, useState } from 'react';
 function Dashboard() {
   const [orderData, setOrderData] = useState([]);
 
-  useEffect(() => {
-    fetch('https://jumjibackend.onrender.com/items')
-      .then((response) => response.json())
-      .then((data) => setOrderData(data))
-      .catch((error) => console.error(error));
+  useEffect(async() => {
+    let data = await fetch('https://jumjibackend.onrender.com/items')
+    data = await data.json()
+
+    if(data.status === true){
+        setOrderData(data)
+    }else{
+        alert('error')
+
+    }
+  
+      
   }, []);
   console.warn(orderData)
 
@@ -44,6 +51,6 @@ function Dashboard() {
       )}
     </div>
   );
-}
+      }
 
-export default Dashboard;
+export default Dashboard
