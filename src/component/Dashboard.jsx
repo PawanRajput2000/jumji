@@ -9,6 +9,7 @@ function Dashboard() {
       .then((data) => setOrderData(data))
       .catch((error) => console.error(error));
   }, []);
+  console.warn(orderData)
 
   return (
     <div>
