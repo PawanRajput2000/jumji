@@ -13,7 +13,7 @@ function Dashboard() {
   return (
     <div>
       <h1>Order Details</h1>
-      {orderData ? (
+      {Array.isArray(orderData) ? (
         orderData.map((order, orderIndex) => (
           <div key={orderIndex}>
             <h2>Order Number: {order.order_number}</h2>
@@ -45,4 +45,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard
+export default Dashboard;
