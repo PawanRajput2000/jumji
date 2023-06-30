@@ -72,7 +72,7 @@ const  Dashboard=()=> {
                 <p>Products:</p>
                 <ul>
                   {entry.products.map((product) => (
-                    <li key={product._id}>
+                    <li key={product._id} className="product-item">
                       <ul>
                         <li>Item ID: {product.item_id}</li>
                         <li>Price: {product.price}</li>
