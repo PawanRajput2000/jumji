@@ -72,7 +72,7 @@ const  Dashboard=()=> {
                 <p>Products:</p>
                 <ul>
                   {entry.products.map((product) => (
-                    <li key={product._id} className={index !== 0 ? 'product-list' : ''}>
+                    <li key={product._id} style={{ marginBottom: '10px' }}>
                       <ul>
                         <li>Item ID: {product.item_id}</li>
                         <li>Price: {product.price}</li>
@@ -87,8 +87,8 @@ const  Dashboard=()=> {
                         <li>Payout: {product.payout}</li>
                         <li>Cost: {product.cost}</li>
                         <li>Profit: {product.profit}</li>
-                      </ul >
-                    </li >
+                      </ul>
+                    </li>
                   ))}
                 </ul>
               </div>
