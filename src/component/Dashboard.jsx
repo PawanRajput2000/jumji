@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Dashboard.css'; // Assuming the CSS file is in the same directory
 
-function Dashboard() {
+const  Dashboard=()=> {
   const [salesData, setSalesData] = useState([]);
 
   useEffect(() => {
