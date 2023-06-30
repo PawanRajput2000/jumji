@@ -10,7 +10,7 @@ function Dashboard() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:5000/getdashboard');
+      const response = await fetch('https://jumjibackend.onrender.com/getdashboard');
       const data = await response.json();
       setSalesData(data.data);
     } catch (error) {
