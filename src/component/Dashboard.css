@@ -22,10 +22,14 @@ ul {
 }
 
 li {
-  margin-bottom: 50px;
+  margin-bottom: 5px;
 }
 
 .loading {
   text-align: center;
   font-style: italic;
+}
+
+.product-list {
+  margin-bottom: 10px; /* Adjust the margin value to your preference */
 }
