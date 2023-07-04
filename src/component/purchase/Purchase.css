@@ -1,0 +1,49 @@
+.purchase-details {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .order-id {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .supplier-id {
+    margin-top: 10px;
+  }
+  
+  .transport-cost {
+    margin-top: 10px;
+  }
+  
+  .items-title {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .items-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .shipping-agent {
+    margin-top: 20px;
+  }
+  
+  .agent-mobile {
+    margin-top: 10px;
+  }
+  
+  .received {
+    margin-top: 10px;
+  }
+  

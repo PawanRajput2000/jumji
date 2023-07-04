@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import './Dashboard.css'; // Assuming the CSS file is in the same directory
+import Product from "../component/product/Product"
+import Purchase from "../component/purchase/Purchase"
 
-const  Dashboard=()=> {
-  const [salesData, setSalesData] = useState([]);
+function Dashboard() {
+    const [salesData, setSalesData] = useState([]);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+    useEffect(() => {
+      fetchData();
+    }, []);
+  
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://jumjibackend.onrender.com/getdashboard');
+        const data = await response.json();
+        setSalesData(data.data);
+      } catch (error) {
+        console.log('Error:', error);
+      }
+    };
 
-  const fetchData = async () => {
-    try {
-      const response = await fetch('https://jumjibackend.onrender.com/getdashboard');
-      const data = await response.json();
-      setSalesData(data.data);
-    } catch (error) {
-      console.log('Error:', error);
-    }
-  };
+   
 
   return (
     <div className="container">
@@ -98,8 +102,14 @@ const  Dashboard=()=> {
       ) : (
         <p className="loading">Loading data...</p>
       )}
+
+      
+      <Product/>
+
+       
+      <Purchase/> 
     </div>
-  );
+  )
 }
 
 export default Dashboard;

@@ -18,6 +18,7 @@ function App() {
       <Route path = "forgetpassword" element = {< ForgetPassword/>} />
       <Route path = "reset-password/:token" element = {<ResetPasswordForm/>} />
       <Route path = "dashboard" element = {<Dashboard/>} />
+     
       </Routes>
       </BrowserRouter>
       
